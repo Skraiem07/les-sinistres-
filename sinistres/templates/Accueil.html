@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+{% block content %}
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  body {
+    font-family: Arial;
+    color: black;
+    size:
+  }
+  
+  .split {
+    
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .left {
+    left: 0;
+    background-image: url_for('static', filename='accueil.jpg');
+  }
+  
+  .right {
+    right: 0;
+    background-color: white;
+  }
+  
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .centered img {
+
+
+  }
+  /* Add an italic font style to all quotes */
+  q {font-style: italic;
+    font-size: 30px;}
+
+  /* Add a blue color to the author */
+  .author {color: cornflowerblue;}
+  </style>
+  </head>
+  <body>
+  
+  <div class="split left">
+    <div class="centered">
+      <img src="{{url_for('static', filename='accueil.jpg')}}" width="700" height="700"" />
+    
+    </div>
+  </div>
+  
+  <div class="split right">
+    <div class="centered">
+      <div class="mySlides">
+        <q>Assurez vous .
+           Au bon prix. Sans compromis.</q>
+        <p class="author">- Les Sinistres</p>
+      </div>
+    </div>
+  </div>
+
+       
+  </body>
+{% endblock content %}
